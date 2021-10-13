@@ -7,7 +7,15 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
+  const trimmedObj = {
+    ...obj 
+  };
+
+  for(let prop in trimmedObj) {
+    trimmedObj[prop] = trimmedObj[prop].trim()
+  }
+
+  return trimmedObj;
 }
 
 /**
